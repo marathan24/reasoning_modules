@@ -77,18 +77,18 @@ if __name__ == "__main__":
         )
     )
 
-    with open('./reasoning_modules/test.jsonl', 'r') as f:
-        lines = f.readlines()
+    # with open('./reasoning_modules/test.jsonl', 'r') as f:
+    #     lines = f.readlines()
 
-    if lines:
-        data = json.loads(random.choice(lines))
-        question_text = data.get("question", "Prove that the sum of the angles in a triangle is 180 degrees.")
-    else:
-        question_text = "Prove that the sum of the angles in a triangle is 180 degrees."
+    # if lines:
+    #     data = json.loads(random.choice(lines))
+    #     question_text = data.get("question", "Prove that the sum of the angles in a triangle is 180 degrees.")
+    # else:
+    #     question_text = "Prove that the sum of the angles in a triangle is 180 degrees."
 
     input_params = {
         "func_name": "reason",
-        "problem": question_text,
+        "problem": "question_text",
         "num_thoughts": 3  # Default number of thoughts to generate
     }
 
