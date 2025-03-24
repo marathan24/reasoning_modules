@@ -9,8 +9,8 @@ from naptha_sdk.inference import InferenceClient
 from naptha_sdk.schemas import AgentDeployment, AgentRunInput, KBRunInput
 from naptha_sdk.user import sign_consumer_id, get_private_key_from_pem
 
-from schemas import ReasoningInput, SystemPromptSchema
-from prompt import cot_prompt, standard_prompt
+from reasoning_modules.schemas import ReasoningInput, SystemPromptSchema
+from reasoning_modules.prompt import cot_prompt, standard_prompt
 
 logger = logging.getLogger(__name__)
 
