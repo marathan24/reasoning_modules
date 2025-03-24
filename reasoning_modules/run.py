@@ -9,7 +9,7 @@ from naptha_sdk.inference import InferenceClient
 from naptha_sdk.schemas import AgentDeployment, AgentRunInput, KBRunInput
 from naptha_sdk.user import sign_consumer_id, get_private_key_from_pem
 
-from reasoning_modules.schemas import ReasoningInput, SystemPromptSchema
+from reasoning_modules.schemas import InputSchema, SystemPromptSchema
 from reasoning_modules.prompt import cot_prompt, standard_prompt
 
 logger = logging.getLogger(__name__)
@@ -53,7 +53,7 @@ class ReasoningAgent:
 
 async def run(module_run: Dict, *args, **kwargs):
     module_run = AgentRunInput(**module_run)
-    module_run.inputs = ReasoningInput(**module_run.inputs)
+    module_run.inputs = InputSchema(**module_run.inputs)
     reasoning_agent = ReasoningAgent()
     await reasoning_agent.create(module_run.deployment)
     result = await reasoning_agent.run(module_run)
