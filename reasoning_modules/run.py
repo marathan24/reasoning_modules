@@ -6,7 +6,7 @@ import asyncio
 import json, random
 
 from naptha_sdk.inference import InferenceClient
-from naptha_sdk.schemas import AgentDeployment, AgentRunInput, KBRunInput
+from naptha_sdk.schemas import AgentDeployment, AgentRunInput
 from naptha_sdk.user import sign_consumer_id, get_private_key_from_pem
 
 from reasoning_modules.schemas import InputSchema, SystemPromptSchema
